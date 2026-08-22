@@ -1,0 +1,117 @@
+{
+  "Tokyo": [
+    ["Tsukiji outer market breakfast crawl", "food", 25, 120, "Tamagoyaki, uni and a standing sushi counter before the crowds."],
+    ["Meiji Jingu and Yoyogi Park walk", "nature", 0, 150, "A forest of 100,000 donated trees in the middle of Shibuya."],
+    ["teamLab digital art museum", "culture", 32, 180, "Rooms you walk through where the artwork reacts to you."],
+    ["Shibuya Sky observation deck", "sightseeing", 22, 90, "Open-air rooftop over the world's busiest crossing. Book the sunset slot."],
+    ["Golden Gai bar hop", "nightlife", 45, 180, "Six alleys of bars that seat six people each."],
+    ["Sumo morning practice visit", "culture", 60, 120, "Watch a stable train, which is closer than any tournament seat."],
+    ["Akihabara electronics and arcade run", "shopping", 30, 150, "Eight floors of retro games and parts you cannot buy at home."]
+  ],
+  "Kyoto": [
+    ["Fushimi Inari at first light", "sightseeing", 0, 150, "Ten thousand gates up the mountain. Go before seven to have them to yourself."],
+    ["Arashiyama bamboo grove and monkey park", "nature", 6, 180, "The grove takes fifteen minutes; the hill above it takes the morning."],
+    ["Tea ceremony in Gion", "culture", 48, 90, "A full matcha service with an explanation of every step."],
+    ["Nishiki Market tasting walk", "food", 28, 120, "A covered street of pickles, tofu skin and grilled skewers."],
+    ["Kinkaku-ji golden pavilion", "sightseeing", 5, 60, "Small site, one perfect view, twenty minutes of walking."],
+    ["Philosopher's Path cycle", "nature", 12, 150, "Canal-side ride linking a dozen quiet temples."]
+  ],
+  "Bangkok": [
+    ["Grand Palace and Wat Pho", "sightseeing", 18, 210, "The reclining Buddha is 46 metres long. Cover shoulders and knees."],
+    ["Chao Phraya river ferry hop", "sightseeing", 2, 120, "The commuter boat is the best transport and the best sightseeing."],
+    ["Chinatown street food at night", "food", 15, 180, "Yaowarat Road after dark: oyster omelette, kway teow, mango sticky rice."],
+    ["Thai cooking class with market tour", "food", 45, 240, "Shop for the ingredients, then cook four dishes and eat them."],
+    ["Chatuchak weekend market", "shopping", 20, 240, "Fifteen thousand stalls. Bring a map and low expectations of finishing."],
+    ["Muay Thai at Rajadamnern Stadium", "culture", 42, 180, "Five bouts, live band, and the betting section is half the show."]
+  ],
+  "Paris": [
+    ["Louvre, one wing only", "culture", 24, 180, "Pick Denon or Sully. Trying to see all three wings ruins the day."],
+    ["Musée d'Orsay", "culture", 18, 150, "A railway station of Impressionists, and a better building than the Louvre."],
+    ["Marais walking loop with pastry stops", "food", 22, 180, "Falafel on Rue des Rosiers, then the oldest square in the city."],
+    ["Eiffel Tower summit at dusk", "sightseeing", 32, 120, "Book ahead. The stairs to the second floor cost half as much."],
+    ["Seine bookstall walk to Notre-Dame", "sightseeing", 0, 90, "Green boxes along the quay, open when the weather holds."],
+    ["Père Lachaise cemetery", "culture", 0, 120, "A quiet hillside of famous graves and very good trees."],
+    ["Canal Saint-Martin evening apéro", "nightlife", 28, 150, "Bottle, baguette, and the lock gates opening."]
+  ],
+  "Rome": [
+    ["Colosseum and Roman Forum", "sightseeing", 26, 240, "One ticket covers both plus the Palatine. Go in that order."],
+    ["Vatican Museums and Sistine Chapel", "culture", 30, 210, "Book the first entry slot; by ten the corridor is a crush."],
+    ["Trastevere food walk", "food", 38, 180, "Cacio e pepe, supplì and a gelato that justifies the queue."],
+    ["Borghese Gallery", "culture", 15, 120, "Two-hour timed entry, and the Berninis alone are worth it."],
+    ["Appian Way bike ride", "nature", 18, 180, "Roman paving, aqueducts and catacombs outside the traffic."],
+    ["Testaccio market lunch", "food", 16, 90, "Where Romans actually shop, with sandwich counters at the back."]
+  ],
+  "Barcelona": [
+    ["Sagrada Família with tower access", "sightseeing", 36, 120, "Book the towers separately; the lift down is a spiral staircase."],
+    ["Park Güell monumental zone", "sightseeing", 12, 120, "Timed entry. The free part of the park has the better view."],
+    ["Gothic Quarter tapas crawl", "food", 35, 180, "Four bars, one dish each, standing up."],
+    ["Bunkers del Carmel sunset", "nature", 0, 90, "Civil-war gun platform, best panorama in the city, bring your own drink."],
+    ["Montjuïc cable car and castle", "sightseeing", 14, 150, "Harbour views on the way up, a fortress and gardens at the top."],
+    ["Barceloneta beach and seafood paella", "relaxation", 30, 180, "Swim first, eat second, and avoid the places with photo menus."]
+  ],
+  "Lisbon": [
+    ["Tram 28 end to end", "sightseeing", 4, 90, "Board at Martim Moniz for a seat. It is a bus route with better views."],
+    ["Belém tower and pastéis de Belém", "food", 12, 150, "The original custard tarts, sold since 1837, eaten warm."],
+    ["Alfama fado evening", "culture", 40, 150, "Dinner and two sets of singing in a room of thirty people."],
+    ["LX Factory and Sunday market", "shopping", 10, 120, "Print works turned into shops under the bridge."],
+    ["Sintra day trip", "sightseeing", 28, 360, "Pena Palace and Quinta da Regaleira. Take the early train."],
+    ["Miradouro sunset circuit", "sightseeing", 0, 120, "Three terraces, one hill, one bottle of vinho verde."]
+  ],
+  "New York": [
+    ["Metropolitan Museum of Art", "culture", 30, 210, "Pay what you wish if you live in the state; otherwise fixed price."],
+    ["High Line and Chelsea Market", "sightseeing", 0, 150, "Elevated railway garden that ends at a food hall."],
+    ["Brooklyn Bridge walk at sunrise", "sightseeing", 0, 90, "Start on the Brooklyn side so the skyline is ahead of you."],
+    ["Broadway show, rush tickets", "culture", 55, 180, "Lottery in the morning, seats at a third of face value."],
+    ["Katz's and Lower East Side food walk", "food", 42, 150, "Pastrami on rye, pickles, then knishes two blocks over."],
+    ["Staten Island Ferry round trip", "sightseeing", 0, 60, "Free, hourly, and it passes the Statue of Liberty."],
+    ["Village jazz set at Village Vanguard", "nightlife", 45, 120, "Cash at the door, no talking during the set."]
+  ],
+  "Istanbul": [
+    ["Hagia Sophia and Blue Mosque", "culture", 26, 180, "Both are working spaces of worship. Check prayer times before going."],
+    ["Grand Bazaar and Spice Bazaar", "shopping", 15, 180, "Four thousand shops. Agree the price before the tea arrives."],
+    ["Bosphorus ferry to Anadolu Kavağı", "sightseeing", 8, 240, "Ninety minutes each way, fish lunch at the far end."],
+    ["Turkish bath at a historic hamam", "relaxation", 55, 90, "Steam, scrub, foam, and a cold room afterwards."],
+    ["Balat and Fener neighbourhood walk", "sightseeing", 0, 150, "Painted houses, antique shops, and the old Greek quarter."],
+    ["Meyhane dinner with meze", "food", 34, 180, "Twenty small plates, rakı, and no rush at all."]
+  ],
+  "Marrakesh": [
+    ["Jemaa el-Fnaa at nightfall", "food", 12, 150, "Food stalls set up at dusk. Eat where the locals queue."],
+    ["Bahia Palace and Saadian Tombs", "culture", 14, 180, "Cedar ceilings and tilework, both close to the medina's south gate."],
+    ["Atlas Mountains day trip", "adventure", 65, 480, "Three Berber villages, a waterfall walk and lunch on a terrace."],
+    ["Majorelle Garden and Berber Museum", "nature", 20, 120, "Cobalt blue walls and a cactus collection. Book a timed slot."],
+    ["Souk navigation with a guide", "shopping", 25, 180, "Worth it once, so you learn how the lanes connect."],
+    ["Hammam and argan oil treatment", "relaxation", 45, 120, "Public or private; the public one costs a tenth as much."]
+  ],
+  "Cape Town": [
+    ["Table Mountain cable car and Platteklip hike", "adventure", 32, 240, "Hike up in two hours, ride down in five minutes."],
+    ["Cape Peninsula drive to Cape Point", "nature", 70, 480, "Chapman's Peak, penguins at Boulders, and the lighthouse at the end."],
+    ["Robben Island ferry and tour", "culture", 42, 240, "Former prisoners guide the tour. Book weeks ahead."],
+    ["Constantia wine tasting", "food", 38, 180, "The oldest wine estates in the country, twenty minutes from town."],
+    ["Bo-Kaap walking tour and Cape Malay cooking", "food", 45, 210, "Painted houses, then a lesson in bobotie and koeksisters."],
+    ["Kirstenbosch summer concert", "nature", 22, 180, "Botanical garden below the mountain, blanket and picnic."]
+  ],
+  "Mexico City": [
+    ["Teotihuacán pyramids", "sightseeing", 35, 360, "Leave at seven to beat the heat and the buses."],
+    ["Frida Kahlo Museum, Coyoacán", "culture", 18, 120, "Timed tickets sell out days ahead. The market nearby is the other half of the day."],
+    ["Taco crawl in Roma and Condesa", "food", 20, 180, "Al pastor, suadero, canasta. Five stops, one street each."],
+    ["Xochimilco trajinera boats", "culture", 25, 240, "Painted barges, floating mariachi and a cooler you bring yourself."],
+    ["Museo Nacional de Antropología", "culture", 5, 180, "The best museum in the Americas. Do the Mexica hall first."],
+    ["Lucha libre at Arena México", "nightlife", 22, 150, "Friday nights, masks for sale outside, front rows get involved."]
+  ],
+  "Sydney": [
+    ["Bondi to Coogee coastal walk", "nature", 0, 180, "Six kilometres of cliff path with three swimming beaches on the way."],
+    ["Sydney Opera House tour", "culture", 45, 90, "Inside the shells, including the concert hall when it is dark."],
+    ["Harbour Bridge climb", "adventure", 190, 210, "Three and a half hours on the arch, harness and all."],
+    ["Manly ferry and beach afternoon", "relaxation", 8, 240, "The commuter ferry is the cheapest harbour cruise in the city."],
+    ["Blue Mountains day trip", "nature", 60, 480, "Three Sisters, Wentworth Falls and the steepest railway in the world."],
+    ["Fish market breakfast", "food", 28, 90, "Get there at seven; the auction floor runs before the shops open."]
+  ],
+  "Reykjavík": [
+    ["Golden Circle self-drive", "nature", 85, 480, "Þingvellir, Geysir, Gullfoss. One tank of fuel, one long day."],
+    ["Blue Lagoon or Sky Lagoon soak", "relaxation", 75, 180, "Book the slot before you land; walk-ups are turned away."],
+    ["Northern lights hunt", "nature", 90, 240, "September to March only, and the forecast decides everything."],
+    ["Glacier hike on Sólheimajökull", "adventure", 120, 300, "Crampons provided. The ice changes shape every season."],
+    ["Whale watching from the old harbour", "nature", 95, 180, "Minke and humpback in summer, and the boat provides overalls."],
+    ["Hallgrímskirkja tower and city walk", "sightseeing", 10, 90, "Lift to the top, then the harbour and the shore path."]
+  ]
+}
