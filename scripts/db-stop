@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="${PROJECT_ROOT:-$PWD}"
+SOCK="${MYSQL_SOCKET:-$ROOT/.devdb/mysql.sock}"
+if [ -S "$SOCK" ]; then
+  mysqladmin --socket="$SOCK" -u root shutdown && echo "MySQL stopped."
+else
+  echo "MySQL is not running."
+fi

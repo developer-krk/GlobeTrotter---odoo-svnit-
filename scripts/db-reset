@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Drop the globetrotter database, recreate it, then load schema and seed data.
+set -euo pipefail
+ROOT="${PROJECT_ROOT:-$PWD}"
+SOCK="${MYSQL_SOCKET:-$ROOT/.devdb/mysql.sock}"
+
+if [ ! -S "$SOCK" ]; then
+  echo "MySQL is not running. Run db-start first." >&2
+  exit 1
+fi
+
+echo "Recreating database globetrotter ..."
+mysql --socket="$SOCK" -u root -e "DROP DATABASE IF EXISTS globetrotter; CREATE DATABASE globetrotter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysql --socket="$SOCK" -u root globetrotter < "$ROOT/backend/db/schema.sql"
+echo "Schema loaded. Seeding ..."
+(cd "$ROOT/backend" && npm run seed)

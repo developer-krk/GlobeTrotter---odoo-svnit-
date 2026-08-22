@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# Start a project-local MySQL (MariaDB) server. Data lives in .devdb/, never in the system.
+set -euo pipefail
+ROOT="${PROJECT_ROOT:-$PWD}"
+DATA="${MYSQL_DATADIR:-$ROOT/.devdb/data}"
+SOCK="${MYSQL_SOCKET:-$ROOT/.devdb/mysql.sock}"
+PORT="${MYSQL_PORT:-3307}"
+LOG="$ROOT/.devdb/mysqld.log"
+TMP="$ROOT/.devdb/tmp"
+PIDFILE="$ROOT/.devdb/mysqld.pid"
+
+mkdir -p "$(dirname "$SOCK")" "$TMP"
+
+if [ -S "$SOCK" ] && mysqladmin --socket="$SOCK" ping >/dev/null 2>&1; then
+  echo "MySQL is already running on socket $SOCK (port $PORT)."
+  exit 0
+fi
+
+if [ ! -d "$DATA/mysql" ]; then
+  echo "Initializing a new database in $DATA ..."
+  mkdir -p "$DATA"
+  mysql_install_db --datadir="$DATA" --auth-root-authentication-method=normal >/dev/null
+fi
+
+echo "Starting MySQL on port $PORT ..."
+mysqld \
+  --datadir="$DATA" \
+  --socket="$SOCK" \
+  --port="$PORT" \
+  --tmpdir="$TMP" \
+  --bind-address=127.0.0.1 \
+  --pid-file="$PIDFILE" \
+  --log-error="$LOG" \
+  --skip-grant-tables=0 \
+  >/dev/null 2>&1 &
+
+for _ in $(seq 1 40); do
+  if mysqladmin --socket="$SOCK" ping >/dev/null 2>&1; then
+    mysql --socket="$SOCK" -u root -e "CREATE DATABASE IF NOT EXISTS globetrotter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+    echo "MySQL is ready. Database: globetrotter  Port: $PORT  User: root (no password)"
+    exit 0
+  fi
+  sleep 0.5
+done
+
+echo "MySQL did not start. Last lines of $LOG:" >&2
+tail -20 "$LOG" >&2 || true
+exit 1

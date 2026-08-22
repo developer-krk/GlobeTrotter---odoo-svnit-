@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="${PROJECT_ROOT:-$PWD}"
+exec mysql --socket="${MYSQL_SOCKET:-$ROOT/.devdb/mysql.sock}" -u root globetrotter "$@"
