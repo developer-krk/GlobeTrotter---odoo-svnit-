@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ tokens
+   GlobeTrotter reads like a chart room: porcelain paper, ink navy, and one
+   ultramarine line that traces the route from the first stop to the last.  */
+
+@theme {
+  --color-canvas:  #EDF1F3;
+  --color-surface: #FFFFFF;
+  --color-sunk:    #E3E9ED;
+
+  --color-ink:     #0B1B2B;
+  --color-slate:   #56697A;
+  --color-mist:    #8A9BAA;
+  --color-rule:    #D3DDE4;
+
+  --color-route:   #2647E8;
+  --color-route-soft: #E5E9FD;
+  --color-sand:    #C98A05;
+  --color-sand-soft: #FBEFD4;
+  --color-sea:     #0E8F87;
+  --color-sea-soft: #D8F0EE;
+  --color-flag:    #C93C24;
+  --color-flag-soft: #FBE4DF;
+
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+
+  --radius-card: 14px;
+}
+
+/* ------------------------------------------------------------------ base */
+
+* { border-color: var(--color-rule); }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-route);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection { background: var(--color-route); color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------- utilities */
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-mist);
+}
+
+@utility num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+@utility card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
+}
+
+@utility field {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-size: 14.5px;
+  color: var(--color-ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &::placeholder { color: var(--color-mist); }
+  &:focus {
+    outline: none;
+    border-color: var(--color-route);
+    box-shadow: 0 0 0 3px var(--color-route-soft);
+  }
+  &:disabled { background: var(--color-sunk); color: var(--color-mist); }
+}
+
+/* ------------------------------------------------------- the route spine
+   The signature element. A trip is an ordered list of stops, so the numbers
+   and the line both carry real information: sequence, and the legs between. */
+
+.spine {
+  position: relative;
+  padding-left: 46px;
+}
+
+.spine::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-route) 0 60%,
+    color-mix(in srgb, var(--color-route) 22%, transparent) 100%
+  );
+}
+
+/* The node sits on the line, which is 46px left of the item's content box. */
+.spine-node {
+  position: absolute;
+  left: -46px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--color-route);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 0 0 5px var(--color-canvas);
+}
+
+/* A day rail inside a stop: lighter, indented, no numbering restart. */
+.day-rail {
+  position: relative;
+  padding-left: 26px;
+}
+.day-rail::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--color-rule);
+}
+.day-tick {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: 2px solid var(--color-route);
+  background: var(--color-surface);
+}
+
+/* ------------------------------------------------------------ animations */
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.rise { animation: rise 0.36s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+
+@keyframes draw {
+  from { stroke-dashoffset: var(--len, 400); }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* ------------------------------------------------------------- scrollbar */
+
+.rail::-webkit-scrollbar { height: 6px; }
+.rail::-webkit-scrollbar-thumb { background: var(--color-rule); border-radius: 999px; }
+.rail::-webkit-scrollbar-track { background: transparent; }
